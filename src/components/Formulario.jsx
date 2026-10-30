@@ -2,11 +2,11 @@ import { useState } from 'react'
 import '../css/Formulario.css'
 
 function Formulario() {
-	const [formularioCreado, setFormularioCreado] = useState(false)
+	const [formulario, setformulario] = useState(false)
 
 	function manejarEnvio(event) {
 		event.preventDefault()
-		setFormularioCreado(true)
+		setformulario(true)
 	}
 
 	return (
@@ -41,7 +41,7 @@ function Formulario() {
 				Cotizar
 			</button>
 
-			{formularioCreado && <p className="alerta-info">Formulario creado</p>}
+			{formulario && <p className="alerta-info">Formulario creado</p>}
 		</form>
 	)
 }
